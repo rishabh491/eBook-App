@@ -7,7 +7,7 @@ import authRoutes from "./routes/authRoute.js";
 import cors from "cors"
 import productRoute from "./routes/productRoute.js";
 import path from "path"
-import {fileURLToPath} from 'url'
+import { fileURLToPath } from 'url'
 
 //configure env
 dotenv.config();
@@ -33,7 +33,7 @@ app.use("/api/v1/auth", authRoutes);
  
 
 //rest api
-app.use('*',function(req,res){
+app.use("*",function(req,res){
   res.sendFile(path.join(__dirname,"./client/build/index.html"))
 })
 
