@@ -15,7 +15,7 @@ const FAQ = () => {
 
 
   const getFeaturedProducts=async()=>{
-    const { data } = await axios.get(`https://better-ant-culottes.cyclic.app//api/v1/product/get-product`);
+    const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/product/get-product`);
     setProducts(data.products.slice(0, 3));
     
   }
